@@ -46,5 +46,5 @@ basic.forever(function () {
 MIT
 
 ```package
-gatorlight=github:sparkfun/pxt-gator-light
+gatormoisture=github:sparkfun/pxt-gator-soil
 ```
