@@ -22,7 +22,7 @@ using namespace pxt;
 
 namespace gatorMoisture {
     /*
-    * Calculates the light in Lux based on the ADC value passed in. 1 step in adcVal is equal to .488 uA or .976 lux at 5V
+    * Calculates the moisture as a value between 0 and 1
     */
     //%
     float getMoisture(int16_t ADCVal) {

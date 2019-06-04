@@ -24,17 +24,19 @@
 
 
 
-//% color=#f44242 icon="\uf185"
+//% color=#f44242 icon="\uf4d8"
 namespace gatorMoisture {
 
-    // Functions for reading moisture from the gatormoisture in moisture or straight adv value
+    // Functions for reading moisture from the gatormoisture in moisture or straight adc value
 
     /**
     * Reads the number
     */
-    //% weight=30 blockId="gatorMoisture_moisture" block="Get moisture on pin %pin | in %gatorMoistureType"
-    export function moisture(pin: AnalogPin, type: gatorMoistureType): number{
-      let ADCVal = pins.analogReadPin(pin)
+    //% weight=30 blockId="gatorMoisture_moisture" block="Get moisture on pin %readPin | in %gatorMoistureType | using power pin %powerPin"
+    export function moisture(readPin: AnalogPin, type: gatorMoistureType, powerPin: DigitalPin): number{
+      pins.digitalWritePin(powerPin, 1)//Toggle power readPin on and off to avoid corrosion
+	  let ADCVal = pins.analogReadPin(readPin)
+      pins.digitalWritePin(powerPin, 0)
       switch(type){
         case gatorMoistureType.moisture: return getMoisture(ADCVal)
         case gatorMoistureType.adcVal: return ADCVal
