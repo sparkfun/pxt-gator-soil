@@ -24,7 +24,7 @@
 
 
 
-//% color=#f44242 icon="\uf4d8"
+//% color=#f44242 icon="\uf043"
 namespace gatorMoisture {
 
     // Functions for reading moisture from the gatormoisture in moisture or straight adc value
