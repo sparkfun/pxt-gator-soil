@@ -30,7 +30,7 @@ namespace gatorMoisture {
     // Functions for reading moisture from the gatormoisture in moisture or straight adc value
 
     /**
-    * Reads the number
+    * Reads the moisture value either as a straight ADC value or a moisture value between 0 and 1.
     */
     //% weight=30 blockId="gatorMoisture_moisture" block="Get moisture on pin %readPin | in %gatorMoistureType | using power pin %powerPin"
     export function moisture(readPin: AnalogPin, type: gatorMoistureType, powerPin: DigitalPin): number{
