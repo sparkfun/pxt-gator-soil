@@ -1,15 +1,15 @@
 {
-    "name": "gatormoisture",
+    "name": "gatorsoil",
     "version": "1.0.1",
-    "description": "SparkFun gator:moisture soil Sensor",
+    "description": "SparkFun gator:soil Soil Moisture Sensor",
     "license": "MIT",
     "dependencies": {
         "core": "*"
     },
     "files": [
         "README.md",
-        "gatormoisture.ts",
-        "gatormoisture.cpp",
+        "gatorsoil.ts",
+        "gatorsoil.cpp",
         "shims.d.ts",
         "enums.d.ts"
     ],

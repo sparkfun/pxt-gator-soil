@@ -20,7 +20,7 @@
 
 using namespace pxt;
 
-namespace gatorMoisture {
+namespace gatorSoil {
     /*
     * Calculates the moisture as a value between 0 and 1
     */

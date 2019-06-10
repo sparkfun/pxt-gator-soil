@@ -16,7 +16,7 @@
      * Distributed as-is; no warranty is given.
      */
 
-declare namespace gatorMoisture {
+declare namespace gatorSoil {
 }
 
 // Auto-generated. Do not edit. Really.

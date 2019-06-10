@@ -1,11 +1,10 @@
-# gator:light Light Sensor
+# gator:soil Soil Moisture Sensor
 
 [![Community Discord](https://img.shields.io/discord/448979533891371018.svg)](https://aka.ms/makecodecommunity)
 
-The gator:starter, which includes the gator:light and gator:temp can be purchased [here.](https://www.sparkfun.com/products/14891)
-The gator:light, included on the gator:starter is an analog light sensor that can be alligator clipped to the micro:bit or gator:bit board.
+The gator:soil, which can be used to read the moisture of soil can be purchased [here.](https://www.sparkfun.com/products/15272)
 
-![SparkFun gator:light](https://raw.githubusercontent.com/sparkfun/pxt-gator-light/master/icon.png)  
+![SparkFun gator:soil](https://raw.githubusercontent.com/sparkfun/pxt-gator-soil/master/icon.png)  
 
 ## ~ hint
 
@@ -16,24 +15,19 @@ To use this package, go to https://makecode.microbit.org, click ``Add package`` 
 ## Basic usage
 
 ```blocks
-//Sets the value of the light variable to the value read from the gator:light
-let light = 0
-light = gatorlight.light(AnalogPin.P0, gatorlightType.Lux)
+//Grabs moisture from the sensor connected to pin P1, powering it using pin P0 to avoid corrosion on the moisture sensing leads.
+gatorMoisture.moisture(AnalogPin.P1, gatorMoistureType.adcVal, DigitalPin.P0)
 ```
 
-Use ``||Get light on pin||`` to read the light value from a gator:light sensor attached to a given pin in lux or the straight ADC value.
+Use ``||Get moisture on pin P0 in adcVal using power pin P0||`` to read the moisture value either as a value between 0 and 1 or the straight ADC value.
 
-## Example: Light Detector
+## Example: Moisture Sensor
 
 ```blocks
-//Read light value and write it to the micro:bit screen as a bar graph.
-let light = 0
+//Read moisture value and write to screen every 60 seconds
 basic.forever(function () {
-    light = gatorlight.light(AnalogPin.P0, gatorlightType.Lux)
-    led.plotBarGraph(
-        light,
-        1023
-    )
+    basic.showNumber(gatorMoisture.moisture(AnalogPin.P1, gatorMoistureType.adcVal, DigitalPin.P0))
+    control.waitMicros(60000000)
 })
 ```
 
@@ -46,5 +40,5 @@ basic.forever(function () {
 MIT
 
 ```package
-gatorMoisture=github:sparkfun/pxt-gator-soil
+gatorSoil=github:sparkfun/pxt-gator-soil
 ```
