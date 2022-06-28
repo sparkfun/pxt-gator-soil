@@ -30,7 +30,7 @@ namespace gatorSoil {
     /**
     * Reads the moisture value either as a straight ADC value or a moisture value between 0 and 1.
     */
-    //% weight=30 blockId="gatorSoil_moisture" block="Get moisture on pin %readPin | in %GatorSoilType | using power pin %powerPin"
+    //% weight=30 blockId="gatorSoil_moisture" block="get moisture on pin %readPin | in %GatorSoilType | using power pin %powerPin"
     export function moisture(readPin: AnalogPin, type: GatorSoilType, powerPin: DigitalPin): number{
       pins.digitalWritePin(powerPin, 1)//Toggle power readPin on and off to avoid corrosion
 	  let ADCVal = pins.analogReadPin(readPin)
