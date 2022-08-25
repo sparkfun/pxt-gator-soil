@@ -1,7 +1,6 @@
 /**
 * Andy England @ SparkFun Electronics
 * September 6, 2018
-
 * Development environment specifics:
 * Written in Microsoft Makecode
 * Tested with a SparkFun gatorSoil sensor and micro:bit
@@ -33,8 +32,10 @@ namespace gatorSoil {
     //% weight=30 blockId="gatorSoil_moisture" block="get moisture on pin %readPin | in %GatorSoilType | using power pin %powerPin"
     export function moisture(readPin: AnalogPin, type: GatorSoilType, powerPin: DigitalPin): number{
       pins.digitalWritePin(powerPin, 1)//Toggle power readPin on and off to avoid corrosion
+	  basic.pause(10)	  
 	  let ADCVal = pins.analogReadPin(readPin)
-      pins.digitalWritePin(powerPin, 0)
+      basic.pause(10)	  
+	  pins.digitalWritePin(powerPin, 0)
       switch(type){
         case GatorSoilType.Moisture: return ADCVal / 1023.0
         case GatorSoilType.ADCValue: return ADCVal
