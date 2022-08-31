@@ -1,6 +1,6 @@
 {
     "name": "gatorSoil",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "description": "SparkFun gator:soil Soil Moisture Sensor",
     "license": "MIT",
     "dependencies": {
