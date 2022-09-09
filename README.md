@@ -10,7 +10,7 @@ The gator:soil, which can be used to read the moisture of soil can be purchased 
 
 ## ~ hint
 
-To use this package, go to https://makecode.microbit.org, click ``Add package`` and search for **gator-soil**. The package is located [here](https://makecode.microbit.org/pkg/sparkfun/pxt-gator-soil)
+To use this extension, go to https://makecode.microbit.org, click ``Extension`` and search for **gator-soil**. The extension is located [here](https://makecode.microbit.org/pkg/sparkfun/pxt-gator-soil)
 
 ## ~
 
