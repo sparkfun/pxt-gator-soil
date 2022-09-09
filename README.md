@@ -18,18 +18,19 @@ To use this extension, go to https://makecode.microbit.org, click ``Extension`` 
 
 ```blocks
 //Grabs moisture from the sensor connected to pin P1, powering it using pin P0 to avoid corrosion on the moisture sensing leads.
-gatorMoisture.moisture(AnalogPin.P1, gatorMoistureType.adcVal, DigitalPin.P0)
+gatorSoil.moisture(AnalogPin.P0, gatorSoilType.soilMoisture, DigitalPin.P1)
 ```
 
-Use ``||Get moisture on pin P0 in adcVal using power pin P0||`` to read the moisture value either as a value between 0 and 1 or the straight ADC value.
+Use ``||Get moisture on pin P0 in adcVal using power pin P1||`` to read the moisture value either as a value between 0 and 1 or the straight ADC value.
 
 ## Example: Moisture Sensor
 
 ```blocks
 //Read moisture value and write to screen every 60 seconds
+serial.redirectToUSB()
 basic.forever(function () {
-    basic.showNumber(gatorMoisture.moisture(AnalogPin.P1, gatorMoistureType.adcVal, DigitalPin.P0))
-    control.waitMicros(60000000)
+    serial.writeLine("Moisture: " + gatorSoil.moisture(AnalogPin.P0, gatorSoilType.soilMoisture, DigitalPin.P1))
+    basic.pause(1000)
 })
 ```
 
