@@ -17,6 +17,8 @@
  * Functions to operate the gatorEnvironment sensor
  */
 
+serial.redirectToUSB()
 basic.forever(function () {
-    serial.writeLine("" + gatorSoil.moisture(AnalogPin.P1, gatorSoilType.moisture, DigitalPin.P2))
+    serial.writeLine("Moisture: " + gatorSoil.moisture(AnalogPin.P0, gatorSoilType.soilMoisture, DigitalPin.P1))
+    basic.pause(1000)
 })
