@@ -4,7 +4,9 @@
 
 The gator:soil, which can be used to read the moisture of soil can be purchased [here.](https://www.sparkfun.com/products/15272)
 
-![SparkFun gator:soil](https://raw.githubusercontent.com/sparkfun/pxt-gator-soil/master/icon.png)  
+[![SparkFun gator:soil](https://raw.githubusercontent.com/sparkfun/pxt-gator-soil/master/icon.png)](https://www.sparkfun.com/products/15272)
+
+[*SparkFun gator:soil (15272)*](https://www.sparkfun.com/products/15272)
 
 ## ~ hint
 
