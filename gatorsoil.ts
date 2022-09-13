@@ -14,24 +14,26 @@
 */
 
 
-/**
- * Functions to operate the gatorsoil sensor
- */
 
+/**
+ * The type of moisture reading
+ */
  enum gatorSoilType{
 	 soilMoisture=1,
 	 adcVal=2,
  }
 
 
-
+/**
+ * Functions to operate the gatorsoil sensor
+ */
 //% color=#f44242 icon="\uf043"
 namespace gatorSoil {
 
     /**
-    * Reads the number
+    * Read the soil moisture level
     */
-	//% weight=30 blockId="gatorSoil_moisture" block="get moisture on pin %readPin | in %gatorSoilType | using power pin %powerPin"
+	//% weight=30 blockId="gatorSoil_moisture" block="moisture on pin %readPin | in %gatorSoilType | using power pin %powerPin"
     export function moisture(readPin: AnalogPin, type:gatorSoilType, powerPin: DigitalPin): number{
       pins.digitalWritePin(powerPin, 1)
 	  basic.pause(10)
