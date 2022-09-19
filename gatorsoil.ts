@@ -25,8 +25,8 @@
 
 
 /**
- * Functions to operate the gatorsoil sensor
- */
+* Functions for working with the gator:soil
+*/
 //% color=#f44242 icon="\uf043"
 namespace gatorSoil {
 
